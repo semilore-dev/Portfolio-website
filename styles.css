@@ -1,0 +1,343 @@
+/* Neon Dark Theme Portfolio */
+body {
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Inter', 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #10131a;
+  color: #eaf6fb;
+  line-height: 1.7;
+}
+
+header.navbar {
+  position: sticky;
+  top: 0;
+  background: #181c24cc;
+  box-shadow: 0 2px 16px #00ffe733, 0 1.5px 0 #00bfff33;
+  z-index: 100;
+  transition: box-shadow 0.3s, background 0.3s;
+  border-bottom: 2px solid #00ffe7;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #00ffe7;
+  text-shadow: 0 0 8px #00ffe7cc;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.logo:hover {
+  color: #00bfff;
+  text-shadow: 0 0 12px #00bfffcc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #eaf6fb;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom 0.2s, text-shadow 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+.nav-links li a:hover, .nav-links li a:focus {
+  color: #00ffe7;
+  border-bottom: 2px solid #00ffe7;
+  text-shadow: 0 0 8px #00ffe7cc;
+}
+
+.landing {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(120deg, #10131a 0%, #181c24 100%);
+  animation: fadeIn 1.2s;
+  border-bottom: 0;
+}
+
+.landing h1 {
+  font-size: 2.8rem;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #00ffe7;
+  letter-spacing: 1px;
+  text-shadow: 0 0 16px #00ffe7cc;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #b0f7ff;
+  margin-bottom: 1.5rem;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+}
+
+.contact-header {
+  margin-bottom: 1.2rem;
+  color: #eaf6fb;
+  font-size: 1rem;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+}
+.contact-header a {
+  color: #00ffe7;
+  text-decoration: none;
+  margin: 0 0.2em;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.contact-header a:hover {
+  color: #00bfff;
+  text-shadow: 0 0 8px #00bfffcc;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.social-links a img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 8px #00ffe7cc) brightness(1.2) invert(0.1);
+  transition: filter 0.2s, transform 0.2s;
+}
+.social-links a:hover img {
+  filter: drop-shadow(0 0 16px #00bfffcc) brightness(1.5);
+  transform: scale(1.15) rotate(-6deg);
+}
+
+section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem 2.5rem 1.5rem;
+  background: #181c24;
+  border-radius: 14px;
+  box-shadow: 0 2px 32px #00ffe71a, 0 1.5px 0 #00bfff22;
+  animation: fadeInUp 1s;
+  border: 1.5px solid #00ffe733;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffe7;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  text-shadow: 0 0 8px #00ffe7cc;
+}
+
+.about .exp-date {
+  color: #b0f7ff;
+}
+
+.skills-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.skills-container > div {
+  flex: 1 1 200px;
+}
+.skills ul {
+  padding-left: 1.2rem;
+}
+.skills li {
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+}
+.skills li:hover {
+  background: #00ffe722;
+  color: #00ffe7;
+  box-shadow: 0 0 8px #00ffe7cc;
+}
+
+/* Project Cards */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.project {
+  background: #10131a;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 32px #00ffe71a, 0 1.5px 0 #00bfff22;
+  border: 1.5px solid #00bfff;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.project:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 48px #00ffe7cc, 0 1.5px 0 #00bfff44;
+  border: 1.5px solid #00ffe7;
+}
+.project h3 {
+  color: #00bfff;
+  margin-bottom: 0.3rem;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  text-shadow: 0 0 8px #00bfffcc;
+}
+.project ul {
+  margin: 0.5rem 0 0 1.2rem;
+  color: #eaf6fb;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #00bfff33;
+}
+
+.project-link {
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  background: #00ffe7;
+  color: #10131a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ffe7cc;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-link:hover {
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0 0 24px #00bfffcc, 0 0 8px #00ffe7cc;
+  transform: translateY(-2px);
+}
+
+.exp-item {
+  margin-bottom: 1.5rem;
+  background: #10131a;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 8px #00bfff33;
+  border: 1.5px solid #00bfff44;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.exp-item:hover {
+  box-shadow: 0 4px 24px #00ffe7cc;
+  border: 1.5px solid #00ffe7;
+}
+.exp-date {
+  font-size: 1rem;
+  color: #b0f7ff;
+  font-weight: 400;
+}
+
+.development ul {
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  color: #b0f7ff;
+}
+
+.contact a {
+  color: #00ffe7;
+  text-decoration: none;
+  transition: text-decoration 0.2s, color 0.2s, text-shadow 0.2s;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+}
+.contact a:hover {
+  text-decoration: underline;
+  color: #00bfff;
+  text-shadow: 0 0 8px #00bfffcc;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  color: #b0f7ff;
+  font-size: 1rem;
+  background: none;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+}
+
+/* Glowing Button Styles (for future use) */
+button, .btn {
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+  background: #00ffe7;
+  color: #10131a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5em 0;
+  cursor: pointer;
+  box-shadow: 0 0 16px #00ffe7cc;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button:hover, .btn:hover {
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0 0 32px #00bfffcc, 0 0 8px #00ffe7cc;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .skills-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  section {
+    margin: 2rem 0.5rem 3.5rem 0.5rem;
+    padding: 1rem 0.5rem 2.5rem 0.5rem;
+  }
+  .landing h1 {
+    font-size: 2rem;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Import neon monospace font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap'); 
